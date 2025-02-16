@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 STATS</title>
+    <!-- Links to stylesheets -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="./footer.css">
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto+Condensed&display=swap" rel="stylesheet"> 
+    <!-- Handlebars.js link -->
+    <!--  Handlebarsjs.com, 'Handlebars Reference', 2022. [Online]. Available: http://handlebarsjs.com/reference.html. [Accessed: 20- Aug- 2022].  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.js"></script>
+
+    
+    
+</head>
+<body>
+    
+    <main class="container" style="margin-left: 0px;margin-right: 0px;">
+       <!-- Logo -->
+       <!-- https://www.stickpng.com/img/icons-logos-emojis/iconic-brands/formula-1-f1-logo -->
+       <div class="logo-container"><a href="./index.html"><img src="./images/61fc02163cf0e70004222072.png" alt="f1logo"></a></div> 
+       <!-- Header -->
+       <div class="first-header"><h1><a href="./index.html">F1 STATISTICS</a></h1></div>
+       <!-- Navbar -->
+       <div class="navbar">
+           <nav>
+               <button class="hamburger" id="hamburger">
+                   <i class="fa fa-bars"></i>
+               </button>
+               <ul class="nav-ul" id="nav-ul">
+                   <li class="navbar-items"><a href="./index.html">Home</a></li>
+                   <li class="navbar-items"><a href="./stats.html">Stats</a></li>
+                   <li class="navbar-items"><a href="./news.html">News</a></li>
+                   <li class="navbar-items" id="active"><a href="./gallery.html">Gallery</a></li>
+                   <li class="navbar-items"><a href="/videos.html">Videos</a></li>
+                   <li class="navbar-items"><a href="/about.html">About</a></li>
+
+                           
+               </ul>
+           </nav>
+       </div>
+       <!-- Gallery -->
+       <div class="gallery-container">
+        <!-- Start of Handlebatrs.js template -->
+    <!--  Handlebarsjs.com, 'Handlebars Reference', 2022. [Online]. Available: http://handlebarsjs.com/reference.html. [Accessed: 20- Aug- 2022].  -->
+
+        <script id="gallery-template" type="template/handlebars">
+            {{#each gallery}}
+               <div id="gallery">
+                    <div class="image">
+                        <img src="{{{this.url}}}" alt="{{{this.alt}}}">
+                        <a href="{{{this.url}}} target="_blank"><div class="image-overlay">
+                            <div class="image-title">{{{alt}}}</div>
+                        </div></a>
+                    </div>
+                </div>
+            {{/each}}
+        </script>
+        <!-- end of habdlebars.js template -->
+        <!-- Target for handlebars.js to change inner html -->
+        <span id="gallery-target"></span> 
+       </div>
+      
+        <!-- Footer -->
+        <div class="footer">
+            <footer>
+                <div class="footer-content">
+                    <h3>F1 STATISTICS</h3>
+                    <p>F1 STATISTICS is where you can find latest news, trends and statistics all at your fingertip, just a CLICK away!</p>
+                    <ul class="socials">
+                        <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a></li>
+
+                        <li><a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <p>copyright &copy;2021 <a href="#">f1statitics</a>  </p>
+                            <div class="footer-menu">
+                              <ul class="f-menu">
+                                <li><a href="./index.html">Home</a></li>
+                                <li><a href="./about.html">About</a></li>
+
+                              </ul>
+                            </div>
+                </div>
+        
+            </footer>
+        </div>
+
+       
+        
+    </main>
+
+    
+</body>
+<script src="index.js"></script>
+<script src="./gallery.js"></script>
+</html>

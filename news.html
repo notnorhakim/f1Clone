@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 STATS</title>
+    <!-- links to stylesheets -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto+Condensed&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@300;700&display=swap" rel="stylesheet"> 
+   
+    <!-- Handlebars.js link -->
+    <!--  Handlebarsjs.com, 'Handlebars Reference', 2022. [Online]. Available: http://handlebarsjs.com/reference.html. [Accessed: 20- Aug- 2022].  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.js"></script>
+
+    
+</head>
+<body>
+   
+    <main class="container" style="margin-left: 0px;margin-right: 0px;">
+        <!-- Logo & Header -->
+        <!-- https://www.stickpng.com/img/icons-logos-emojis/iconic-brands/formula-1-f1-logo -->
+        <div class="logo-container"><a href="./index.html"><img src="./images/61fc02163cf0e70004222072.png" alt="f1logo"></a></div>  
+        <div class="first-header"><h1><a href="./index.html">F1 STATISTICS</a></h1></div>
+        <!-- Navbar -->
+        <div class="navbar">
+            <nav>
+                <button class="hamburger" id="hamburger">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <ul class="nav-ul" id="nav-ul">
+                    <li class="navbar-items"><a href="./index.html">Home</a></li>
+                    <li class="navbar-items" ><a href="./stats.html">Stats</a></li>
+                    <li class="navbar-items" id="active"><a href="./news.html">News</a></li>
+                    <li class="navbar-items"><a href="./gallery.html">Gallery</a></li>
+                    <li class="navbar-items"><a href="/videos.html">Videos</a></li>
+                    <li class="navbar-items"><a href="/about.html">About</a></li>
+                            
+                </ul>
+            </nav>
+        </div>
+        <!-- Exclusive -->
+        <div class="exclusive-container">
+            <div id="exclusive-image">
+                <img src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/2022SummerBreak/GettyImages-1412001675.jpg.transform/9col-retina/image.jpg" alt="F1 Cars">
+                <a href="/articles/article-9.html"><div class="image-overlay">
+                    <div class="image-title">Trending</div>
+                </div></a>
+            </div> 
+            <div id="exclusive-header">
+                EXCLUSIVE
+            </div>
+            <div id="exclusive-title">
+                <h3><a href="/articles/article-9.html">FIA World Motor Sport Council approves power unit regulations for 2026</a></h3>
+            </div>
+            <div id="exclusive-content">
+                The FIA World Motor Sport Council has today approved power unit regulations set to come into effect for the 2026 season – with increased electrical power and 100% sustainable fuels two of the key aspects of the newly-approved rules.
+            </div>
+        </div>
+        <!-- News -->
+        <div class="news-container">
+            <!-- start of handlbars.js template -->
+    <!--  Handlebarsjs.com, 'Handlebars Reference', 2022. [Online]. Available: http://handlebarsjs.com/reference.html. [Accessed: 20- Aug- 2022].  -->
+
+            <script id="news-template" type="template/handlebars">
+                {{#each news}}
+                    <div class="news-section">
+                        <div id="news-image">
+                            <img src="{{{this.url}}}" alt="F1 Cars">
+                        </div>
+                        <div id="news-items">
+                            <div id="news-header">
+                                {{{this.header}}}
+                            </div>
+                            <div id="news-title">
+                                <a href="{{{link}}}">{{{this.title}}}</a>
+                            </div>
+                            <div id="news-content">
+                                {{{this.content}}}
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </script>
+            <!-- end of handlbars.js template -->
+            <span id="news-target"></span>
+        </div>
+        <!-- Sidenews -->
+        <div class="sidenews-container">
+            <div id="sidenews">
+    <!--  Handlebarsjs.com, 'Handlebars Reference', 2022. [Online]. Available: http://handlebarsjs.com/reference.html. [Accessed: 20- Aug- 2022].  -->
+
+                <script id="driver-template" type="template/handlebars">
+                    <h3>Driver's Standings</h3>
+                    {{#each driver}}
+                    <div>{{{this.drivername}}}</div>
+                    {{/each}}
+                </script>
+                <span id="driver-target"></span>
+            </div>
+        </div>
+        
+
+        <!-- Footer -->
+        <div class="footer">
+            <footer>
+                <div class="footer-content">
+                    <h3>F1 STATISTICS</h3>
+                    <p>F1 STATISTICS is where you can find latest news, trends and statistics all at your fingertip, just a CLICK away!</p>
+                    <ul class="socials">
+                        <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a></li>
+
+                        <li><a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <p>copyright &copy;2021 <a href="#">f1statitics</a>  </p>
+                            <div class="footer-menu">
+                              <ul class="f-menu">
+                                <li><a href="./index.html">Home</a></li>
+                                <li><a href="./about.html">About</a></li>
+
+                              </ul>
+                            </div>
+                </div>
+        
+            </footer>
+        </div>
+        
+
+       <!-- links to scripts -->
+        <script src="index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="stats.js"></script>
+        <script src="news.js"></script>
+        
+    </main>
+        
+    
+    
+</body>
+</html>

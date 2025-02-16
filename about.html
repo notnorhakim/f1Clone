@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 STATS</title>
+    <!-- links to different stylesheets for different sections -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/about.css">
+    <link rel="stylesheet" href="/carousel.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- font links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto+Condensed&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@300;700&display=swap" rel="stylesheet"> 
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    
+</head>
+<body>
+   
+    <main class="container" style="margin-left: 0px;margin-right: 0px;">
+        <!-- Logo & Header -->
+        <!-- https://www.stickpng.com/img/icons-logos-emojis/iconic-brands/formula-1-f1-logo -->
+        <div class="logo-container"><a href="./index.html"><img src="./images/61fc02163cf0e70004222072.png" alt="f1logo"></a></div>  
+        <div class="first-header"><h1><a href="./index.html">F1 STATISTICS</a></h1></div>
+        <!-- Navbar -->
+        <div class="navbar">
+            <nav>
+                <button class="hamburger" id="hamburger">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <ul class="nav-ul" id="nav-ul">
+                    <li class="navbar-items"><a href="./index.html">Home</a></li>
+                    <li class="navbar-items" ><a href="./stats.html">Stats</a></li>
+                    <li class="navbar-items"><a href="./news.html">News</a></li>
+                    <li class="navbar-items"><a href="./gallery.html">Gallery</a></li>
+                    <li class="navbar-items"><a href="/videos.html">Videos</a></li>
+                    <li class="navbar-items"  id="active"><a href="/about.html">About</a></li>
+                            
+                </ul>
+            </nav>
+        </div>
+        <!-- Carousell -->
+        <div class="carousel-container">
+
+        <section class="carousel" aria-label="Gallery">
+        <ol class="carousel__viewport">\
+            <!-- SLide 1 -->
+            <li id="carousel__slide1"
+                tabindex="0"
+                class="carousel__slide">
+            <div class="carousel__snapper">
+                <!-- Imgage taken from wallpaperflare.com -->
+                <img src="https://c4.wallpaperflare.com/wallpaper/422/882/465/ineos-iwc-lewis-hamilton-mercedes-amg-petronas-formula-1-hd-wallpaper-preview.jpg" alt="ferarri f1 team">
+            </div>
+                <a href="#carousel__slide4"
+                class="carousel__prev">Go to last slide</a>
+                <a href="#carousel__slide2"
+                class="carousel__next">Go to next slide</a>
+            
+            </li>
+            <!-- slide 2 -->
+            <li id="carousel__slide2"
+                tabindex="0"
+                class="carousel__slide">
+            <div class="carousel__snapper">
+                <!-- Image taken from Formula1.com -->
+                <img src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2021manual/2021BritishManualAdds/2022CarImages/2022CarImageSTUDIO/2022%20F1%20Car%20Race%20Service%20-%20Ryan%20Davis-5.jpg" alt="f1 car nft">
+            </div>
+            <a href="#carousel__slide1"
+                class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide3"
+                class="carousel__next">Go to next slide</a>
+            </li>
+            <!-- Slide 3 -->
+            <li id="carousel__slide3"
+                tabindex="0"
+                class="carousel__slide">
+            <div class="carousel__snapper">
+                <!-- Image taken from goodwood.com -->
+                <img src="https://www.goodwood.com/globalassets/.road--racing/race/modern/2022/3-march/f1-2022-calendar/2022-f1-calendar-drivers-championship-standings-zak-mauger-mi-21032022.jpg?crop=(0,135,2600,1598)&width=1600" alt="f1 cars">
+            </div>
+            <a href="#carousel__slide2"
+                class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide4"
+                class="carousel__next">Go to next slide</a>
+            </li>
+            <!-- Slide 4 -->
+            <li id="carousel__slide4"
+                tabindex="0"
+                class="carousel__slide">
+            <div class="carousel__snapper">
+                <!-- Image taken from wallpaperflare.com -->
+                <img src="https://c4.wallpaperflare.com/wallpaper/659/965/95/red-bull-f1-hd-cars-wallpaper-preview.jpg" alt="red bull f1 car">
+            </div>
+            <a href="#carousel__slide3"
+                class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide1"
+                class="carousel__next">Go to first slide</a>
+            </li>
+        </ol>
+        <!-- Carousel navigation -->
+        <aside class="carousel__navigation">
+            <ol class="carousel__navigation-list">
+            <li class="carousel__navigation-item">
+                <a href="#carousel__slide1"
+                class="carousel__navigation-button">Go to slide 1</a>
+            </li>
+            <li class="carousel__navigation-item">
+                <a href="#carousel__slide2"
+                class="carousel__navigation-button">Go to slide 2</a>
+            </li>
+            <li class="carousel__navigation-item">
+                <a href="#carousel__slide3"
+                class="carousel__navigation-button">Go to slide 3</a>
+            </li>
+            <li class="carousel__navigation-item">
+                <a href="#carousel__slide4"
+                class="carousel__navigation-button">Go to slide 4</a>
+            </li>
+            </ol>
+        </aside>
+        </section>
+
+
+         
+        </div>
+        <!-- About -->
+        <div class="about-container">
+            <div id="about">
+                <h2>About Us!</h2>
+                <br>
+                <br>
+                <br>
+                <h3>Welcome To F1 Statistics</h3>
+                <br>
+                <p>
+
+                    F1 Statistics is a Professional Magazine and News Platform. Here we will provide you only interesting contents and statistics, which you will enjoy very much. We're dedicated to providing you the best of News, Statistics, Videos,Gallery, with a focus on dependability and Formula 1 Racing. We're working to turn our passion for Formula 1 into a booming online website. We hope you enjoy our website as much as we enjoy offering them to you.
+                    
+                    I will keep posting more important posts on my Website for all of you. Please give your support and love.
+                    
+                    Thanks For Visiting Our Site
+                    
+                    Have a nice day!</p>
+            </div>
+        </div>
+        <!-- Let's Connect -->
+        <div class="connect-container">
+            <div id="connect">
+                Let's Connect
+                <br>
+                <a href="mailto:sales@f1statistics.com" class="nav-link-w-arrows">Contact us <span>&#8594;</span></a>
+                
+            </div>
+        </div>
+        
+        
+
+        <!-- Footer -->
+        <div class="footer">
+            <footer>
+                <div class="footer-content">
+                    <h3>F1 STATISTICS</h3>
+                    <p>F1 STATISTICS is where you can find latest news, trends and statistics all at your fingertip, just a CLICK away!</p>
+                    <ul class="socials">
+                        <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a></li>
+
+                        <li><a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <p>copyright &copy;2021 <a href="#">f1statitics</a>  </p>
+                            <div class="footer-menu">
+                              <ul class="f-menu">
+                                <li><a href="./index.html">Home</a></li>
+                                <li><a href="./about.html">About</a></li>
+                              </ul>
+                            </div>
+                </div>
+        
+            </footer>
+        </div>
+        
+
+       
+        <script src="index.js"></script>
+        <script src="stats.js"></script>
+        <script src="/about.js"></script>
+        
+    </main>
+        
+    
+    
+</body>
+</html>

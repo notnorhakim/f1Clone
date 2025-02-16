@@ -1,0 +1,100 @@
+/* logo container dimensions */
+.logo-container{
+    height:90px;
+    width:90px;
+    margin-left: 120px;
+
+}
+/* gallery container secion in grid */
+.container > div:nth-of-type(4) {
+    grid-column: 1 / 7;
+    grid-row: 3 / 9;  
+}
+
+.gallery-container{
+    
+    height: auto;
+    width: 100%;
+    /* image taken from cutewallpaper.com */
+    background-image: url("https://cutewallpaper.org/21/racing-track-backgrounds/PNG-HD-Race-Track-Transparent-HD-Race-Track.PNG-Images-.jpg") ;
+}
+
+#gallery-target{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+/* image styling template  */
+.image{
+    height: 330px;
+    width: auto;
+    border: black 1px solid;
+    box-shadow: 5px 5px 10px;
+    margin: 5px;
+}
+/* individual image styling */
+.image img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.gallery-container .image{
+    position: relative;
+}
+#gallery img{
+    display: block;
+    width: 100%;
+}
+#gallery div:nth-child(2){
+    padding: 5px;
+    margin-bottom: 40px;
+}
+
+/* image overlay for the hover animation  */
+.gallery-container .image-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.6);
+    color: white;
+    font-family: 'vanityfair';
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+.gallery-container .image-overlay > *{
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+.gallery-container .image-overlay:hover > * {
+    transform: translateY(0);
+}
+.gallery-container .image-overlay:hover{
+    opacity: 1;
+}
+.gallery-container .image-title{
+    font-size: 2em;
+    font-weight: bold;
+}
+/* end of image overlay for animation */
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 880px){
+    .image img{
+        width: auto;
+        height: 100%;
+    }
+    .logo-container {
+        margin: 0;
+        width: 100%;
+    }
+    .logo-container  img{
+        justify-items: center;
+    }
+}

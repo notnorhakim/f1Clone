@@ -1,0 +1,232 @@
+/* logo styling */
+.logo-container{
+    height:90px;
+    width:90px;
+    margin-left: 120px;
+
+}
+/* body styling */
+body{
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+/* Exclusive section */
+.container > div:nth-of-type(4) {
+    grid-column: 1 / 7;
+    grid-row: 3 / 4;
+    
+}
+/* news section */
+.container > div:nth-of-type(5){
+    grid-column: 1 / 6;
+    grid-row: 4 / 9;
+    
+}
+
+
+
+/* sidenews section */
+.container > div:nth-of-type(6){
+    grid-column: 6 / 7;
+    grid-row: 4 / 9;
+    
+
+}
+/* Exclusive Section */
+.exclusive-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+    margin-bottom: 60px;
+    border-bottom: rgba(0, 0, 0, 0.2) 2px solid;
+    border-left:  rgba(0, 0, 0, 0.2) 4px solid;
+
+    border-right: rgba(0, 0, 0, 0.2) 4px solid;
+    border-radius: 50px;
+    margin:0px 20px 20px 20px;
+}
+#exclusive-image{
+
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+#exclusive-image > img{
+    width: 100%;
+    display: block;
+}
+/* start of image overlay animation  */
+#exclusive-image .image-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.6);
+    color: white;
+    font-family: 'vanityfair';
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+#exclusive-image.image-overlay > *{
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+#exclusive-image .image-overlay:hover > * {
+    transform: translateY(0);
+}
+#exclusive-image .image-overlay:hover{
+    opacity: 1;
+}
+#exclusive-image .image-title{
+    font-size: 2em;
+    font-weight: bold;
+}
+#exclusive-header{
+
+    font-size: 15px;
+    color: red;
+    margin: 10px;
+}
+#exclusive-title{
+
+    font-size: 35px;
+    margin-left:  60px;
+    margin-right:  60px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    font-family: 'Playfair Display', serif;
+
+}
+#exclusive-content{
+
+    margin-left: 300px;
+    margin-right: 300px;
+    font-family: 'Roboto', sans-serif;
+}
+/* end of image overlay animation  */
+
+/* News  */
+.news-section{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: 250px;
+    margin-bottom: 30px;
+    align-items: center;
+    border-right:  rgba(0, 0, 0, 0.2) 4px solid;
+    border-top:  rgba(0, 0, 0, 0.2) 1px solid;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+    
+
+}
+#news-items{
+    padding: 20px;
+}
+#news-header{
+    color: red;
+    font-size: 15px;
+    
+}
+#news-title{
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+    
+}
+#news-content{
+    line-height: 25px;
+}
+
+
+
+#news-image > img{
+    height: 250px;
+    width:400px;
+    padding: 5px;
+}
+
+/* sidenews */
+.sidenews-container{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items:baseline;
+
+    width: 100%;
+    height: auto;
+
+    
+    
+}
+#sidenews{
+    
+    justify-self:right;
+    text-align: end;
+    width: 200px;
+    position: sticky;
+    top: 20px;
+    border-left: 2px black solid;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+    box-shadow: -5px -5px red;
+
+
+}
+#sidenews div{
+    padding: 5px;
+}
+#sidenews h3{
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+#sidenews div:nth-child(2n){
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 880px){
+    .news-section{
+        display: flex;
+        flex-direction: column;
+        border-bottom: black 2px solid;
+        height: auto;
+    }
+    #news-image img{
+        width: 100%;
+    }
+
+    .sidenews-container{
+        display: none;
+    }
+    #exclusive-content{
+        margin: 0;
+    }
+    .logo-container {
+        margin: 0;
+        width: 100%;
+    }
+    .logo-container  img{
+        justify-items: center;
+    }
+    #exclusive-title{
+        font-size: 25px;
+        width: 100%;
+    }
+    .exclusive-container{
+        margin-top: 20px;
+    }
+}
+
